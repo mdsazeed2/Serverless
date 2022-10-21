@@ -3,9 +3,10 @@ const jwt = require("jsonwebtoken");
 var mysql = require("mysql");
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password",
+  host: "crm.ciozo2gsp2ag.us-east-1.rds.amazonaws.com",
+  port:"3306",
+  user: "SAZ",
+  password: "S@zsam786",
   database: "crm",
 });
 

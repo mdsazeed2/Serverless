@@ -14,7 +14,9 @@ export default function LeadListPage() {
 
     // const url = "https://7z5c6akbv9.execute-api.us-east-1.amazonaws.com/verifyotp-dev-GetSingleLead";
     useEffect(()=>{
-    const url = "http://localhost:3000/dev/GetSingleLead"
+    //const url = "http://localhost:3000/dev/GetSingleLead"
+    const url = "https://ligxj2ejig.execute-api.us-east-1.amazonaws.com/verifyotp-dev-GetSingleLead";
+
     const data = {};
     const Headers = {};
     
