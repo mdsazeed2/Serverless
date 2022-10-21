@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export default function Mainlist() {
   const [array, setArray] = useState([]);
   useEffect(() => {
-    const url = "https://8mtnecluj6.execute-api.us-east-1.amazonaws.com/dev/GetSingleLead";
+    const url = "https://7z5c6akbv9.execute-api.us-east-1.amazonaws.com/verifyotp-dev-GetSingleLead";
     const data = {};
     const Headers = {};
     axios.post(url, data, { Headers: Headers })
