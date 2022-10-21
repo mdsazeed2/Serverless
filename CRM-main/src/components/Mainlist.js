@@ -1,28 +1,11 @@
 import "./Mainlist.css";
-import axios from "axios";
+
 
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { useEffect, useState } from "react";
-export default function Mainlist() {
-  const [array, setArray] = useState([]);
-  useEffect(() => {
-    const url = "https://7z5c6akbv9.execute-api.us-east-1.amazonaws.com/verifyotp-dev-GetSingleLead";
-    const data = {};
-    const Headers = {};
-    axios.post(url, data, { Headers: Headers })
-      .then((res) => {
-        console.log("Response==>" + JSON.stringify(res.data));
-        for(const temp of res.data){
-          temp.isclicked = false
-        }
-        console.log(res.data)
-        setArray(res.data)
-      })
-
-      .catch((err) => {
-        console.log("Error==>" + err);
-      });
-  }, []);
+// import { useState } from "react";
+export default function Mainlist({array, setArray}) {
+  // const [array, setArray] = useState([]);
+  // const data = localStorage.getItem();
   return (
     <>
       <div className="Mainlist_Outer">
@@ -30,14 +13,16 @@ export default function Mainlist() {
         <div className="Mainlist_header">
           <div className="Mainlist_row1">
             <ul>
-              <li>FirstName</li>
-              <li>LastName</li>
-              <li>Status</li>
-              <li>Created on </li>
-              <li>Email</li>
-              <li>Responses</li>
-              <li>Owner</li>
-            </ul>
+              
+              <div className="Header_Main1"><li>FirstName</li></div>
+              <div className="Header_Main2"><li>LastName</li></div>
+              <div className="Header_Main3"><li>Status</li></div>
+              <div className="Header_Main4"><li>Created on </li></div>
+              <div className="Header_Main5"><li>Email</li></div>
+              <div className="Header_Main6"><li>Responses</li></div>
+              <div className="Header_Main7"><li>Owner</li></div>
+            
+              </ul>
           </div>
         </div>
         <div className="Mainlist_Innerbox">
@@ -54,6 +39,11 @@ export default function Mainlist() {
     </>
   );
 }
+
+
+
+
+
 function ListRow({itm, array, setArray}) {
   const handleClick=(e, itm)=>{
     let temp=[...array];
@@ -65,8 +55,8 @@ function ListRow({itm, array, setArray}) {
     setArray(temp)
   }
   const d=new Date(itm.CreatedOn);
-  let day = d.getDay();
-  let month = d.getMonth();
+  let day = d.getDate();
+  let month = d.getMonth()+1;
   let year = d.getFullYear();
   return (
     <>
@@ -74,13 +64,13 @@ function ListRow({itm, array, setArray}) {
         <input className="Cb" type="checkbox" onClick={e=>handleClick(e, itm)}/>
               <label for="checkbox"></label>
         <div className="Mainlist_list_row">
-          <div>{itm.FirstName}</div>
-          <div>{itm.LastName}</div>
-          <div>{itm.Status}</div>
-          <div>{day}-{month}-{year}</div>
-          <div>{itm.Email}</div>
-          <div>{itm.Responses}</div>
-          <div>{itm.Owner}</div>
+          <div className="itmFirstName">{itm.FirstName}</div>
+          <div className="itmLastName">{itm.LastName}</div>
+          <div className="itmStatus">{itm.Status}</div>
+          <div className="itmdate">{year}-{month}-{day}</div>
+          <div className="itmEmail">{itm.Email}</div>
+          <div className="itmResponses">{itm.Responses}</div>
+          <div className="itmOwner">{itm.Owner}</div>
           <div className="Mainlist_icon">
             <AiOutlineArrowRight />
           </div>

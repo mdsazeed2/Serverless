@@ -140,3 +140,63 @@ color: white;
 .Mainlist_list_row_top:hover{
   background-color:#9155FD;
 }
+.itmFirstName{
+ width:80px;
+ 
+}
+.itmLastName{
+  width:80px;
+  margin-left:15px;
+}
+.itmStatus{
+  width:80px;
+  margin-left:14px;
+}
+.itmdate{
+  width:80px;
+  margin-left:15px;
+}
+.itmEmail{
+  width:160px;
+  margin-left:15px;
+}
+
+.itmResponses{
+  width:30px;
+  margin-left:15px;
+}
+.itmOwner{
+  margin: 2px;
+  width:30px;
+  
+}
+.Header_Main1{
+  width:60px;
+  margin-left:15px;
+}
+.Header_Main2{
+  width: 89px;
+  margin-left: 84px;
+}
+
+.Header_Main3{
+  width:61px;
+  margin-left:46px;
+}
+.Header_Main4{
+  width:103px;
+  margin-left:61px;
+}
+.Header_Main5{
+  width:43px;
+  margin-left:68px;
+}
+.Header_Main6{
+  width:54px;
+  margin-left:103px;
+}
+.Header_Main7{
+  width: 43px;
+  margin-left: 47px;
+
+}
