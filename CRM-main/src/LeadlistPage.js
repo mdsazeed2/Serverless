@@ -14,11 +14,11 @@ export default function LeadListPage() {
 
     // const url = "https://7z5c6akbv9.execute-api.us-east-1.amazonaws.com/verifyotp-dev-GetSingleLead";
     useEffect(()=>{
-    // const url = "http://localhost:3000/dev/GetSingleLead"
-    const url = "https://ligxj2ejig.execute-api.us-east-1.amazonaws.com/verifyotp-dev-GetSingleLead";
+    const url = "http://localhost:3000/dev/GetSingleLead"
+    // const url = "https://h5mqgjmos4.execute-api.us-east-1.amazonaws.com/dev/GetSingleLead";
 
     const data = {};
-    const Headers = {};
+    const Headers = {token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFhYUB4eXouY29tIiwicGFzc3dvcmQiOiJhMTIzNDUiLCJpYXQiOjE2NjY2ODI4ODB9.K4Y5_douK9aWWCBriunBp-rX3nTNByY23yyOtEPD2kc"};
     
     axios.post(url, data, { Headers: Headers })
       .then((res) => {
