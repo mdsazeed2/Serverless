@@ -6,9 +6,15 @@ var con = mysql.createConnection({
   host: "crm.ciozo2gsp2ag.us-east-1.rds.amazonaws.com",
   port:"3306",
   user: "SAZ",
-  password: "S@zsam786",
+  password: "password",
   database: "crm",
 });
+// var con = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "password",
+//   database: "crm",
+// });
 
 con.connect(function (err) {
   if (err) throw err;

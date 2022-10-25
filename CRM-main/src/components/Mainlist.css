@@ -200,3 +200,7 @@ color: white;
   margin-left: 47px;
 
 }
+::placeholder{
+  color: lightgray;
+  font-weight: bold;
+}
